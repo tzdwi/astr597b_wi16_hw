@@ -1,0 +1,86 @@
+# Schema for SDSS table
+filters: {complevel: 5, complib: blosc}
+schema:
+  basic:
+    primary_key: oid
+    spatial_keys: [ra, dec]
+    columns:
+    - [oid, u8]
+    - [run, i2]
+    - [rerun, S3] 
+    - [camcol, u1] 
+    - [field, i8] 
+    - [ID, i2]
+    - [objc_type, i4]
+    - [objc_flags, i4] 
+    - [objc_flags2, i4]
+    - [zhedflag, i2]
+    - [objc_rowc, f4]
+    - [rowvdeg, f4]
+    - [rowvdegerr, f4]
+    - [colvdeg, f4]
+    - [colvdegerr, f4]
+    - [rowc, 5f4]
+    - [colc, 5f4]
+    - [M_RR_CC, 5f4]
+    - [M_RR_CC_PSF, 5f4]
+    - [flags, 5i4]
+    - [flags2, 5i4]
+    - [ra, f8]
+    - [dec, f8]
+  photo:
+    columns:
+    - [SKYFLUX, 5f4]
+    - [PSFFLUX, 5f4]
+    - [PSFFLUX_IVAR, 5f8]
+    - [MODELFLUX, 5f8]
+    - [MODELFLUX_IVAR, 5f8]
+    - [EXTINCTION, 5f8]
+    - [FIBERFLUX, 5f8]
+    - [FIBERFLUX_IVAR, 5f8]    
+    - [FIBER2FLUX, 5f8]
+    - [FIBER2FLUX_IVAR, 5f8]        
+    - [APERFLUX6, 5f4]
+  irc:
+    columns:
+    - [PSP_STATUS, 5i8]
+    - [PSF_FWHM, 5f8]
+    - [RESOLVE_STATUS, i8]
+    - [THING_ID, i8]
+    - [IFIELD, i8]
+    - [BALKAN_ID, i8]
+    - [NDETECT, i4]
+    - [CALIB_STATUS, 5i8]
+    - [NMGYPERCOUNT, 5f8]
+    - [PM_MATCH, i4]
+    - [PMRA, f8]
+    - [PMDEC, f8]
+    - [PMRAERR, f8]
+    - [PMDECERR, f8]
+    - [PM_SIGRA, f8]
+    - [PM_SIGDEC,f8]
+    - [PM_NFIT, i4]
+    - [PM_DIST22, f4]
+    
+  tmass:
+    columns:
+    - [TMASS_J, f4]
+    - [TMASS_J_IVAR, f4]
+    - [TMASS_H, f4]
+    - [TMASS_H_IVAR, f4]
+    - [TMASS_K, f4]
+    - [TMASS_K_IVAR, f4]
+    - [TMASS_PH_QUAL, S25]
+    - [TMASS_RD_FLG, i4]
+    - [TMASS_BL_FLG, i4]
+    - [TMASS_CC_FLG,  S25]
+    - [TMASS_GAL_CONTAM, u1]
+    - [TMASS_MP_FLG, u1]
+    - [TMASS_JDATE, u4]
+    - [TMASS_HEMIS, S1]
+    
+                         
+
+    
+    
+
