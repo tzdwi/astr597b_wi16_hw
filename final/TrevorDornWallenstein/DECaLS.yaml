@@ -1,0 +1,76 @@
+# Schema for DECaLS Tractor Files
+filters: {complevel: 5, complib: blosc}
+schema:
+  basic:
+    primary_key: oid
+    spatial_keys: [ra, dec]
+    columns:
+    - [oid, u8]
+    - [brickid, i4]
+    - [brickname, S8]
+    - [objid, i4]
+    - [brick_primary, bool]
+    - [blob, i4]
+    - [ninblob, i2]
+    - [tycho2inblob, bool]
+    - [type, S4]
+    - [ra, f8]
+    - [ra_ivar, f4]
+    - [dec, f8]
+    - [dec_ivar, f4]
+    - [bx, f4]
+    - [by, f4]
+    - [bx0, f4]
+    - [by0, f4]
+    - [left_blob, bool]
+    - [out_of_bounds, bool]
+    - [dchisq, 5f4]
+    - [ebv, f4]
+  photo:  
+    columns:
+    - [decam_flux, 6f4]
+    - [decam_flux_ivar, 6f4]
+    - [decam_apflux,'(6,8)f4']
+    - [decam_apflux_resid, '(6,8)f4']
+    - [decam_apflux_ivar, '(6,8)f4']
+    - [decam_mw_transmission, 6f4]
+    - [decam_nobs, 6i8]
+    - [decam_rchi2, 6f4]
+    - [decam_fracflux, 6f4]
+    - [decam_fracmasked, 6f4]
+    - [decam_fracin, 6f4]
+    - [decam_anymask, 6i2]
+    - [decam_allmask, 6i2]
+    - [decam_psfsize, 6f4]
+    - [decam_depth, 6f4]
+    - [decam_galdepth, 6f4]
+  wise:
+    columns:
+    - [wise_flux, 4f4]
+    - [wise_flux_ivar, 4f4]
+    - [wise_mw_transmission, 4f4]
+    - [wise_nobs, 4i2]
+    - [wise_fracflux, 4f4]
+    - [wise_rchi2, 4f4]
+
+  shape:  
+    columns:
+    - [fracdev, f4]
+    - [fracdev_ivar, f4]
+    - [shapeexp_r, f4]
+    - [shapeexp_r_ivar, f4]
+    - [shapeexp_e1, f4]
+    - [shapeexp_e1_ivar, f4]
+    - [shapeexp_e2, f4]
+    - [shapeexp_e2_ivar, f4]
+    - [shapedev_r, f4]
+    - [shapedev_r_ivar, f4]
+    - [shapedev_e1, f4]
+    - [shapedev_e1_ivar, f4]
+    - [shapedev_e2, f4]
+    - [shapedev_e2_ivar, f4]
+    
+    
+                         
+
+    
